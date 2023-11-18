@@ -1,12 +1,30 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Coffee from "./Coffee";
+
+const mainCoffeeList = [
+  {
+
+  },
+  {
+
+  },
+  {
+
+  }
+];
 
 function CoffeeList() {
   return (
-    <Coffee
-      location="Cello1"
-      names="Moses and Poston"
-      issue="No Issue" />
+    <React.Fragment>
+      <Coffee
+        location="Cello1"
+        names="Moses and Poston"
+        roast="No Issue" />
+      <Coffee 
+      location="cello-2"
+      names="Xtine and Danny"
+      issue="No Issue"/>
+    </React.Fragment>
   );
 }
 
