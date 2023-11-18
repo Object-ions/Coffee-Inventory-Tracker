@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from 'uuid';
 import Coffee from "./Coffee";
 
 const mainCoffeeList = [
@@ -32,6 +33,7 @@ function CoffeeList() {
           origin={coffee.origin}
           price={coffee.price}
           roast={coffee.roast}
+          id={v4()}
           key={coffee.index}/>
       )}
     </React.Fragment>
