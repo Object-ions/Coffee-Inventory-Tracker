@@ -7,7 +7,8 @@ class CoffeeControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formVisibleOnPage: false
+      formVisibleOnPage: false,
+      mainCoffeeList: []
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -27,7 +28,7 @@ class CoffeeControl extends React.Component {
       currentlyVisibleState = <NewCoffeeForm />
       buttonText = "Return to Coffee List";
     } else {
-      currentlyVisibleState = <CoffeeList />
+      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList}/>
       buttonText = "Add Coffee";
     }
 
