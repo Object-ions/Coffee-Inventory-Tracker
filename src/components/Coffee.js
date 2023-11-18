@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Coffee(props) {
   return (
     <React.Fragment>
-      <h3> {props.origin} - {props.names} </h3>
+      <h3>{props.name} - {props.origin} </h3>
       <p>{props.price} - {props.roast}</p>
       <hr/>
     </React.Fragment>

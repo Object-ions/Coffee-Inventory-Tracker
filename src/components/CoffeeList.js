@@ -3,27 +3,37 @@ import Coffee from "./Coffee";
 
 const mainCoffeeList = [
   {
-
+    name: "Arabica",
+    origin: "Ethiopia",
+    price: "$ 6.99",
+    roast: "Medium"
   },
   {
-
+    name: "Robusta",
+    origin: "Uganda",
+    price: "$ 6.99",
+    roast: "Medium"
   },
   {
+    name: "Liberica",
+    origin: "Liberia",
+    price: "$ 6.99",
+    roast: "Medium"
+  },
 
-  }
 ];
 
 function CoffeeList() {
   return (
     <React.Fragment>
-      <Coffee
-        location="Cello1"
-        names="Moses and Poston"
-        roast="No Issue" />
-      <Coffee 
-      location="cello-2"
-      names="Xtine and Danny"
-      issue="No Issue"/>
+      <hr/>
+      {mainCoffeeList.map((coffee, index) => 
+        <Coffee name={coffee.name}
+          origin={coffee.origin}
+          price={coffee.price}
+          roast={coffee.roast}
+          key={coffee.index}/>
+      )}
     </React.Fragment>
   );
 }
