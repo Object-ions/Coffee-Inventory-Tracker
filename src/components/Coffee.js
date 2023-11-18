@@ -7,6 +7,7 @@ function Coffee(props) {
       <p>{props.issue}</p>
       <hr/>
     </React.Fragment>
+    
   );
 }
 
