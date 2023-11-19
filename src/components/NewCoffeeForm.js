@@ -18,11 +18,15 @@ function newCoffeeForm(props) {
   return (
     <React.Fragment>
       <form onSubmit={handleNewCoffeeFormSubmission}>
-        <input type='text' name='name' placeholder='Coffee name'/>
-        <input type='text' name='origin' placeholder='Coffee origin'/>
-        <input type='text' name='roast' placeholder='Roast'/>
-        <input type='text' name='weight' placeholder='burlap sack in lb'/>
-        <input type='text' name='price' placeholder='Price'/>
+        <input type='text' name='name' placeholder='Coffee name' required/>
+        <input type='text' name='origin' placeholder='Coffee origin' required/>
+        <select name='roast' defaultValue='Light' required>
+          <option value='Light'>Light</option>
+          <option value='Medium'>Medium</option>
+          <option value='Dark'>Dark</option>
+        </select>
+        <input type='number' name='weight' placeholder='burlap sack in lb' defaultValue='130' min='0' max='500'/>
+        <input type='number' name='price' placeholder='Price'required/>
 
         <button type='submit'>Submit</button>
       </form>
