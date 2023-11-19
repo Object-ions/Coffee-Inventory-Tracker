@@ -39,6 +39,14 @@ class CoffeeControl extends React.Component {
     this.setState({selectedCoffee: selectedCoffee});
   }
 
+  handleDeletingCoffee = (id) => {
+  const newMainCoffeeList = this.state.mainCoffeeList.filter(coffee => coffee.id !== id);
+  this.setState({
+    mainCoffeeList: newMainCoffeeList,
+    selectedCoffee: null
+  });
+}
+
   render() {
 
     let currentlyVisibleState = null;
