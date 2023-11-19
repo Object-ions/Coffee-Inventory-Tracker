@@ -6,7 +6,7 @@ function newCoffeeForm(props) {
 
   function handleNewCoffeeFormSubmission(e) {
     e.preventDefault();
-    props.onNewTicketCreation({
+    props.onNewCoffeeCreation({
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
