@@ -13,7 +13,7 @@ class CoffeeControl extends React.Component {
       selectedCoffee: null,
       editing: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   // Toggles visibility of the form
@@ -48,7 +48,7 @@ class CoffeeControl extends React.Component {
   }
 
   // Update - Edits the selected coffee item
-  handleEditClick() {
+  handleEditClick = () => {
     console.log('Edit fx reached');
     this.setState({editing: true});
   } 
@@ -88,7 +88,7 @@ class CoffeeControl extends React.Component {
     }
 
     return (
-        <div class="main">
+        <div className="main">
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
         </div>

@@ -5,7 +5,7 @@ import logoImage from "./../img/logo.png"
 
 function Header() {
   return (
-    <div class="header">
+    <div className="header">
       <img src={logoImage} alt="logo" />
       <h2>Inventory Panel</h2>
     </div>
