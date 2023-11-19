@@ -2,6 +2,7 @@ import React from "react";
 import NewCoffeeForm from "./NewCoffeeForm";
 import CoffeeList from './CoffeeList';
 import CoffeeDetail from "./CoffeeDetail";
+import EditCoffeeForm from './EditCoffeeForm';
 
 class CoffeeControl extends React.Component {
   // State
@@ -68,8 +69,13 @@ class CoffeeControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
+    // Check state: on edit mode
+    if (this.state.editing) {
+      currentlyVisibleState = <EditCoffeeForm coffee = {this.state.selectedCoffee} />
+      buttonText = "Return to Coffee List";
+
     // Check state: on Coffee Detail
-    if (this.state.selectedCoffee != null) {
+    } else if (this.state.selectedCoffee != null) {
       currentlyVisibleState = <CoffeeDetail
             coffee = {this.state.selectedCoffee}
             onClickingDelete = {this.handleDeletingCoffee}
