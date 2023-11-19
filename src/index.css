@@ -3,6 +3,26 @@ body {
   color: #603912;
 }
 
+h3 {
+  font-size: 15px;
+}
+
 a {
   color: #a37243;
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+.main{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+  align-items: center;
+  border: 1px solid #a37243;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
