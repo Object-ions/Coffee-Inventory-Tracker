@@ -3,6 +3,10 @@ body {
   color: #603912;
 }
 
+h1 {
+  margin-top: 10px;
+}
+
 h3 {
   font-size: 15px;
 }
@@ -12,17 +16,45 @@ a {
 }
 
 button {
-  margin-bottom: 10px;
+  margin: 10px 0;
+  background-color: transparent;
+  border: 1px solid #a37243;
+}
+
+button:hover {
+  border: 2px solid #603912;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .main{
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin: 0 auto;
+  width: 90%;
+  height: 80%;
+  margin: 10px auto;
   align-items: center;
   border: 1px solid #a37243;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+  margin-top: 5px;
+}
+
+.card:hover {
+  border: 2px solid #603912;
 }

@@ -21,6 +21,7 @@ function newCoffeeForm(props) {
         <input type='text' name='name' placeholder='Coffee name'/>
         <input type='text' name='origin' placeholder='Coffee origin'/>
         <input type='text' name='roast' placeholder='Roast'/>
+        <input type='text' name='weight' placeholder='burlap sack in lb'/>
         <input type='text' name='price' placeholder='Price'/>
 
         <button type='submit'>Submit</button>
