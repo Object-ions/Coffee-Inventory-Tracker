@@ -10,7 +10,8 @@ class CoffeeControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       mainCoffeeList: [],
-      selectedCoffee: null
+      selectedCoffee: null,
+      editing: false
     };
     this.handleClick = this.handleClick.bind(this);
   }
