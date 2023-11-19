@@ -16,9 +16,16 @@ class CoffeeControl extends React.Component {
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+    if (this.state.selectedCoffee != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedCoffee: null
+      });
+    } else {
+      this.setState(prevState => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
   }
 
   handleAddingNewCoffeeToList = (newCoffee) => {
@@ -43,7 +50,7 @@ class CoffeeControl extends React.Component {
       currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList}/>
       buttonText = "Return to Coffee List";
     } else {
-      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList}/>
+      currentlyVisibleState = <CoffeeList coffeeList={this.state.mainCoffeeList} onCoffeeSelection={this.handleChangingSelectedCoffee}/>
       buttonText = "Add Coffee";
     }
 
