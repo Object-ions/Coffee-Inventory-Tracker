@@ -4,19 +4,22 @@ import PropTypes from "prop-types";
 function Coffee(props) {
   return (
     <React.Fragment>
-      <h3>{props.name} - {props.origin} </h3>
-      <p>{props.price} - {props.roast}</p>
-      <hr/>
+      <div onClick = {() => props.whenCoffeeClicked(props.id)} >
+        <h3>{props.name} - {props.origin} </h3>
+        <p>{props.price} - {props.roast}</p>
+        <hr/>
+      </div>
     </React.Fragment>
-
   );
 }
 
 Coffee.propTypes = {
-  names: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   origin: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   roast: PropTypes.string.isRequired,
-}
+  id: PropTypes.string,
+  whenCoffeeClicked: PropTypes.func
+};
 
 export default Coffee;
