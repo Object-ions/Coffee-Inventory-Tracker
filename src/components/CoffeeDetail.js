@@ -10,14 +10,15 @@ function CoffeeDetail(props) {
       <h1>Coffee Detail</h1>
       <h3>{coffee.name} - {coffee.origin}</h3>
       <h3>{coffee.roast} - {coffee.price}</h3>
+      <button onClick={ props.onClickingEdit }>Update Coffee Item</button>
       <button onClick = { () => onClickingDelete(coffee.id) }>Delete Coffee Item</button>
-      <hr/>
     </React.Fragment>
   );
 }
 
 CoffeeDetail.propTypes = {
   coffee: PropTypes.object,
+  onClickingEdit: PropTypes.func,
   onClickingDelete: PropTypes.func
 };
 
