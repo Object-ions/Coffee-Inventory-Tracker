@@ -2,7 +2,11 @@ import React from "react";
 import NewCoffeeForm from "./NewCoffeeForm";
 import CoffeeList from './CoffeeList';
 import CoffeeDetail from "./CoffeeDetail";
+<<<<<<< HEAD
 import EditCoffeeForm from './EditCoffeeForm';
+=======
+import EditCoffeeForm from "./EditCoffeeForm";
+>>>>>>> new-branch
 
 class CoffeeControl extends React.Component {
   // State
@@ -51,7 +55,19 @@ class CoffeeControl extends React.Component {
   // Update - Edits the selected coffee item
   handleEditClick = () => {
     this.setState({editing: true});
-  } 
+  }
+
+  // Update - actual editing the selected coffee item
+  handleEditingCoffeeInList = (coffeeToEdit) => {
+    const editedMainCoffeeList = this.state.mainCoffeeList
+        .filter(coffee => coffee.id !== this.state.selectedTicket.id)
+        .concat(coffeeToEdit);
+    this.setState({
+      mainCoffeeList: editedMainCoffeeList,
+      editing: false,
+      selectedCoffee: null
+    });
+  }
 
   // Remove - Removes a coffee item from the list
   handleDeletingCoffee = (id) => {
@@ -68,9 +84,16 @@ class CoffeeControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
+<<<<<<< HEAD
     // Check state: on edit mode
     if (this.state.editing) {
       currentlyVisibleState = <EditCoffeeForm coffee = {this.state.selectedCoffee} />
+=======
+    if (this.state.editing) {
+      currentlyVisibleState = <EditCoffeeForm 
+          coffee = {this.state.selectedCoffee}
+          onEditCoffee = {this.handleEditingCoffeeInList} />
+>>>>>>> new-branch
       buttonText = "Return to Coffee List";
 
     // Check state: on Coffee Detail
