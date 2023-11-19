@@ -31,7 +31,7 @@ class CoffeeControl extends React.Component {
   handleAddingNewCoffeeToList = (newCoffee) => {
     const newMainCoffeeList = this.state.mainCoffeeList.concat(newCoffee);
     this.setState({mainCoffeeList: newMainCoffeeList,
-                  formIsVisibleOnPage: false });
+                  formVisibleOnPage: false });
   }
 
   handleChangingSelectedCoffee = (id) => {
