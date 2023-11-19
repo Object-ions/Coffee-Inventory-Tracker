@@ -50,7 +50,6 @@ class CoffeeControl extends React.Component {
 
   // Update - Edits the selected coffee item
   handleEditClick = () => {
-    console.log('Edit fx reached');
     this.setState({editing: true});
   } 
 
