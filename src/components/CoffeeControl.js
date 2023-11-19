@@ -2,11 +2,7 @@ import React from "react";
 import NewCoffeeForm from "./NewCoffeeForm";
 import CoffeeList from './CoffeeList';
 import CoffeeDetail from "./CoffeeDetail";
-<<<<<<< HEAD
-import EditCoffeeForm from './EditCoffeeForm';
-=======
 import EditCoffeeForm from "./EditCoffeeForm";
->>>>>>> new-branch
 
 class CoffeeControl extends React.Component {
   // State
@@ -84,16 +80,10 @@ class CoffeeControl extends React.Component {
     let currentlyVisibleState = null;
     let buttonText = null;
 
-<<<<<<< HEAD
-    // Check state: on edit mode
-    if (this.state.editing) {
-      currentlyVisibleState = <EditCoffeeForm coffee = {this.state.selectedCoffee} />
-=======
     if (this.state.editing) {
       currentlyVisibleState = <EditCoffeeForm 
           coffee = {this.state.selectedCoffee}
           onEditCoffee = {this.handleEditingCoffeeInList} />
->>>>>>> new-branch
       buttonText = "Return to Coffee List";
 
     // Check state: on Coffee Detail
