@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import ReusableForm from './ReusableForm';
-
-
-function EditCoffeeForm (props) {
-  return (
-    <React.Fragment>
-      <ReusableForm 
-        buttonText = "Update Coffee Item" />
-=======
 import React from "react";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
@@ -32,17 +21,13 @@ function EditCoffeeForm (props) {
       <ReusableForm 
         formSubmissionHandler={handleEditCoffeeFormSubmission}
         buttonText="Update Coffee" />
->>>>>>> new-branch
     </React.Fragment>
   );
 }
 
-<<<<<<< HEAD
-=======
 EditCoffeeForm.propTypes = {
   coffee: PropTypes.object,
   onEditCoffee: PropTypes.func
 };
 
->>>>>>> new-branch
 export default EditCoffeeForm;

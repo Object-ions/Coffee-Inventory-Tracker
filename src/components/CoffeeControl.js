@@ -22,7 +22,8 @@ class CoffeeControl extends React.Component {
     if (this.state.selectedCoffee != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedCoffee: null
+        selectedCoffee: null,
+        editing: false
       });
     } else {
       this.setState(prevState => ({
@@ -56,7 +57,7 @@ class CoffeeControl extends React.Component {
   // Update - actual editing the selected coffee item
   handleEditingCoffeeInList = (coffeeToEdit) => {
     const editedMainCoffeeList = this.state.mainCoffeeList
-        .filter(coffee => coffee.id !== this.state.selectedTicket.id)
+        .filter(coffee => coffee.id !== this.state.selectedCoffee.id)
         .concat(coffeeToEdit);
     this.setState({
       mainCoffeeList: editedMainCoffeeList,
