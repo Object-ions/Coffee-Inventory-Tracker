@@ -66,6 +66,19 @@ class CoffeeControl extends React.Component {
     });
   }
 
+  // Update - Sell a pound
+  handleSellingPound = (id) => {
+  const updatedMainCoffeeList = this.state.mainCoffeeList.map((coffee) => {
+    if (coffee.id === id && coffee.weight > 0) {
+      return { ...coffee, weight: coffee.weight - 1 };
+    } else {
+      return coffee;
+    }
+  });
+
+  this.setState({ mainCoffeeList: updatedMainCoffeeList });
+}
+
   // Remove - Removes a coffee item from the list
   handleDeletingCoffee = (id) => {
   const newMainCoffeeList = this.state.mainCoffeeList
@@ -92,7 +105,8 @@ class CoffeeControl extends React.Component {
       currentlyVisibleState = <CoffeeDetail
             coffee = {this.state.selectedCoffee}
             onClickingDelete = {this.handleDeletingCoffee}
-            onClickingEdit = {this.handleEditClick} />
+            onClickingEdit = {this.handleEditClick}
+            onSellPound = {this.handleSellingPound} />
       buttonText = "Return to Coffee List";
 
       // Check state: New Coffee Form

@@ -11,8 +11,8 @@ function newCoffeeForm(props) {
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
-      weight: parseInt(e.target.weight.value),
-      price: parseInt(e.target.price.value),
+      weight: e.target.weight.value,
+      price: e.target.price.value,
       id: v4()
     });
   }
