@@ -41,7 +41,7 @@ This React application manages a coffee inventory. Users can add new burlap sack
 
 ## Known Bugs
 
-- At this moment the user cannot 'sell' coffee.
+- No bugs known
 
 ## License
 
