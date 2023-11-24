@@ -76,7 +76,13 @@ class CoffeeControl extends React.Component {
     }
   });
 
-  this.setState({ mainCoffeeList: updatedMainCoffeeList });
+  if (this.state.selectedCoffee && this.state.selectedCoffee.weight > 0) {
+    this.setState({ 
+    mainCoffeeList: updatedMainCoffeeList,
+    editing: false,
+    selectedCoffee: {...this.state.selectedCoffee, weight: this.state.selectedCoffee.weight -1}
+  });
+  }
 }
 
   // Remove - Removes a coffee item from the list
