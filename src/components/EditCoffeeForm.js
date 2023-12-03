@@ -10,8 +10,8 @@ function EditCoffeeForm(props) {
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
-      weight: e.target.weight.value,
-      price: e.target.price.value,
+      weight: parseFloat(e.target.weight.value),
+      price: parseFloat(e.target.price.value),
       id: coffee.id,
     });
   }
